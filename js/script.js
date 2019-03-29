@@ -146,27 +146,32 @@ function printQuote() {
     //so the button works
       document.getElementById("quote-box").innerHTML = html;
 
+    //assign a variable to changeBg function
+    var randColor = changeBg();
+
+  //change the background color to the random color returned from the
+  //changeBg function
+  document.getElementsByTagName("body")[0].style.backgroundColor = randColor;
+
 }
 
+//array of colors used for changing the background color
 var colors = ["purple", "black", "blue", "deeppink", "tomato", "lime",
               "coral", "crimson", "darkcyan", "darkorange", "firebrick",
               "LightSeaGreen" , "plum", "SteelBlue" ,"SandyBrown", "SeaGreen"];
 
 function changeBg() {
+
+    //select a random number from zero to the length of the colrors array
     var rand = Math.floor(Math.random() * (colors.length ));
+
+    //use random number to select a color from the colors array
     var randColor = colors[rand];
 
+    //return the randomly selected color name
     return randColor;
 
 }
 
-var randColor = changeBg();
-
-document.getElementsByTagName("body")[0].style.backgroundColor = randColor;
-
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-
-
-//document.getElementById('loadQuote').addEventListener("click", changeBg, false);
