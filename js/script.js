@@ -150,7 +150,7 @@ function printQuote() {
 
 var colors = ["purple", "black", "blue", "deeppink", "tomato", "lime",
               "coral", "crimson", "darkcyan", "darkorange", "firebrick",
-              "LightSeaGreen" , "plum", "SteelBlue" ,"SandyBrown"];
+              "LightSeaGreen" , "plum", "SteelBlue" ,"SandyBrown", "SeaGreen"];
 
 function changeBg() {
     var rand = Math.floor(Math.random() * (colors.length ));
@@ -158,12 +158,15 @@ function changeBg() {
 
     return randColor;
 
-
-
 }
 
 var randColor = changeBg();
 
 document.getElementsByTagName("body")[0].style.backgroundColor = randColor;
 
+
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+
+
+
+//document.getElementById('loadQuote').addEventListener("click", changeBg, false);
