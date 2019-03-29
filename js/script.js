@@ -21,6 +21,7 @@ var quotes = [
       source: "Marlon Brando",
       citation: "The Godfather",
       year: 1972,
+      director: "Francis Ford Coppola",
 
   },
 
@@ -29,6 +30,8 @@ var quotes = [
       source: "Strother Martin",
       citation: "Cool Hand Luke",
       year: 1967,
+      director: "Stuart Rosenberg",
+
 
   },
 
@@ -36,6 +39,8 @@ var quotes = [
       quote: "Aw, man. I shot Marvin in the face",
       source: "John Travolta",
       citation: "Pulp Fiction",
+      director: "Quentin Tarantino",
+
 
   },
 
@@ -44,6 +49,8 @@ var quotes = [
       source: "Roy Scheider",
       citation: "Jaws",
       year: 1975,
+      director: "Steven Speilberg",
+
 
   },
 
@@ -51,10 +58,54 @@ var quotes = [
       quote: "Houston we have a problem",
       source: "Tom Hanks",
       citation: "Apollo 13",
-      year: 1995
+      year: 1995,
+      director: "Ron Howard",
+
 
   },
 
+  {
+      quote: "Nobody puts Baby in a corner.",
+      source: "Patrick Swayze",
+      citation: "Dirty Dancing",
+      year: 1987,
+      director: "Emile Ardolino",
+
+
+
+  },
+
+  {
+      quote: "Say hello to my little friend!",
+      source: "Al Pacino",
+      citation: "Scarface",
+      director: "Brian De Palma"
+
+  },
+
+  {
+      quote: "Dear Diary: My teen angst bullshit now has a body count.",
+      source: "Winona Ryder",
+      citation: "Heathers",
+
+
+  },
+
+  {
+      quote: "I'll get you my pretty! And you're little dog too!",
+      source: "Margaret Hamilton",
+      citation: "The Wizard of Oz",
+      year: 1939,
+
+  },
+
+  {
+    quote: "Gentlemen, you can't fight in here! This is the War Room!",
+    source: "Peter Sellers",
+    citation: "Dr. Strangelove",
+    director: "Stanley Kubrick"
+
+  }
 
 ] ;
 
@@ -87,10 +138,24 @@ function printQuote() {
           }
 
           if(rand['year']) {
-            html += '<span class="year">' + rand['year'] + '</span></p>';
+            html += '<span class="year">' + rand['year'] + '</span>';
           }
 
+        if(rand['director']) {
+              html += '<br><span class="director">Director - ' + rand['director'] + '</span>';
+            }
+
+        html += '</p>';
+
+
       document.getElementById("quote-box").innerHTML = html;
+
+}
+
+var colors = ["purple", "black", "blue", "yellow", "deeppink", "tomato", "lime"]
+
+function getColor() {
+
 
 }
 
