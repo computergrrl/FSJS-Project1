@@ -149,9 +149,19 @@ function printQuote() {
     //assign a variable to changeBg function
     var randColor = changeBg();
 
+    //assign a different variable to change the button color
+    var randButtonColor = changeBg();
+
+    //if background color is the same as button background color then make
+    //the button background color gray
+    if (randButtonColor === randColor) {
+        randButtonColor = "dimgray";
+    }
+
   //change the background color to the random color returned from the
   //changeBg function
   document.getElementsByTagName("body")[0].style.backgroundColor = randColor;
+  document.getElementsByTagName("button")[0].style.backgroundColor = randButtonColor;
 
 }
 
